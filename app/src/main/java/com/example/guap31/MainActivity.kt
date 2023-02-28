@@ -15,8 +15,6 @@ import com.example.guap31.SH_lesson_adapter.Lesson_info
 import com.example.guap31.databinding.ActivityMainBinding
 import org.json.JSONObject
 
-
-
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding: ActivityMainBinding
 
@@ -27,14 +25,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: SH_day_adapter
     private lateinit var recyclerView: RecyclerView
 
-    private val myLog = "myLog"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
-        Log.d(myLog, "|||||||||||||||||||||||||||||||||||||||||||\nonCreate\n-------------------------------------")
 
         groupLink = getLinkGroup()
         lessonTime = getShJson("time")
@@ -42,17 +37,11 @@ class MainActivity : AppCompatActivity() {
         init_spinner_group()
         init_spinner_Week()
 
-        Log.d(myLog, "spinner: ${mainBinding.spinner.selectedItem}\n-")
-        Log.d(myLog, "spinner2: ${mainBinding.spinner2.selectedItem}\n" +
-                               "--------------------------")
 
         init_day_list()
     }
 
-
     fun init_day_list() {
-        Log.d(myLog, "init_day_list\n" +
-                "-")
         recyclerView = mainBinding.RViewDay
         adapter = SH_day_adapter()
         recyclerView.adapter = adapter
@@ -75,8 +64,6 @@ class MainActivity : AppCompatActivity() {
                 outputJsDateString, groupLink[mainBinding.spinner.selectedItem].toString(),
                 nameWeekList[mainBinding.spinner2.selectedItem].toString(), i)
 
-
-
             lessons.keys().forEach { keyLes ->
                 if (lessons[keyLes].toString() != "")
                     LessonList.add(
@@ -91,13 +78,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         adapter.setScheduleList(DayList)
-        Log.d(myLog, "end init_day_list\n" +
-                "--------------------------")
     }
 
     fun init_spinner_Week() {
-        Log.d(myLog, "init_spinner_Week\n" +
-                "-")
         val numWeek =
             listOf("Числитель", "Знаменатель" , "Сегодня")
         val list = ArrayAdapter(this, android.R.layout.simple_spinner_item, numWeek)
@@ -109,20 +92,16 @@ class MainActivity : AppCompatActivity() {
         mainBinding.spinner2.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long){
-                Log.d(myLog, "onItemSelected\n" +
-                        "-")
+
                 init_day_list()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) { }
         }
-        Log.d(myLog, "end init_spinner_Week\n" +
-                "--------------------------")
     }
 
     fun init_spinner_group() {
-        Log.d(myLog, "init_spinner_group\n" +
-                "-")
+
         val list = ArrayAdapter(this, android.R.layout.simple_spinner_item, groupLink.keys.toList())
         list.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
@@ -137,8 +116,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onNothingSelected(parent: AdapterView<*>) { }
         }
-        Log.d(myLog, "end init_spinner_group\n" +
-                "--------------------------")
     }
 
     fun getLinkGroup(): MutableMap<String, String> {
