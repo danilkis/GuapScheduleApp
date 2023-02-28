@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Рсписание</string>
+    <string name="select_group">Выбер группы</string>
+
 </resources>
