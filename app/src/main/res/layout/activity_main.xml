@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_neutral95"
-    android:textAlignment="center"
+    android:background="@color/white"
     android:backgroundTint="@color/material_on_surface_stroke"
+    android:textAlignment="center"
     tools:context=".MainActivity">
 
 
@@ -15,11 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/material_dynamic_neutral10"
+        android:backgroundTint="@color/material_dynamic_secondary80"
         android:theme="@style/Theme.Guap31"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/material_dynamic_secondary80">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Spinner
             android:id="@+id/spinner"
@@ -28,11 +28,11 @@
             android:layout_marginEnd="8dp"
 
             android:backgroundTintMode="src_in"
+            android:foregroundTint="@color/material_dynamic_neutral_variant30"
             android:spinnerMode="dialog"
             app:barrierMargin="@dimen/material_emphasis_disabled"
             app:layout_constraintBottom_toBottomOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
-            android:foregroundTint="@color/material_dynamic_neutral_variant30"
             app:layout_constraintTop_toTopOf="@+id/textView" />
 
         <TextView
@@ -57,14 +57,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:foregroundTint="@color/material_dynamic_neutral_variant30"
             android:spinnerMode="dialog"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/spinner"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="parent"
-            android:foregroundTint="@color/material_dynamic_neutral_variant30" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
