@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/material_dynamic_neutral95"
     android:textAlignment="center"
-
+    android:backgroundTint="@color/material_on_surface_stroke"
     tools:context=".MainActivity">
 
 
@@ -18,20 +18,21 @@
         android:theme="@style/Theme.Guap31"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/material_dynamic_secondary80">
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/white"
 
             android:backgroundTintMode="src_in"
             android:spinnerMode="dialog"
             app:barrierMargin="@dimen/material_emphasis_disabled"
             app:layout_constraintBottom_toBottomOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
+            android:foregroundTint="@color/material_dynamic_neutral_variant30"
             app:layout_constraintTop_toTopOf="@+id/textView" />
 
         <TextView
@@ -42,7 +43,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Расписание"
-            android:textColor="@color/white"
+            android:textColor="@color/material_dynamic_neutral_variant30"
             android:textSize="16sp"
             android:textStyle="bold"
             android:theme="@style/Theme.Guap31"
@@ -56,14 +57,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/white"
             android:spinnerMode="dialog"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/spinner"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:foregroundTint="@color/material_dynamic_neutral_variant30" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -80,5 +81,4 @@
         tools:listitem="@layout/day_sh_layout">
 
     </androidx.recyclerview.widget.RecyclerView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

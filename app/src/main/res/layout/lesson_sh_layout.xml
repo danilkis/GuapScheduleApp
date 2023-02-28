@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/material_dynamic_secondary30">
+        android:background="@color/material_dynamic_secondary95">
 
         <TextView
             android:id="@+id/beginTime"
@@ -22,7 +22,7 @@
             android:layout_marginTop="16dp"
             android:text="09:20"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/material_dynamic_neutral_variant30"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +33,7 @@
             android:layout_marginTop="4dp"
             android:text="n"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/material_dynamic_neutral_variant30"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/beginTime"
             app:layout_constraintStart_toStartOf="@+id/beginTime"
@@ -47,7 +47,7 @@
             android:layout_marginBottom="16dp"
             android:text="11:05"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/material_dynamic_neutral_variant30"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/beginTime"
             app:layout_constraintStart_toStartOf="@+id/beginTime"
@@ -61,7 +61,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@color/white"
+            android:background="@color/material_dynamic_neutral_variant30"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/beginTime"
@@ -74,7 +74,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:text="namelesson"
-            android:textColor="@color/white"
+            android:textColor="@color/material_dynamic_neutral_variant30"
             app:layout_constraintBottom_toBottomOf="@+id/endTime"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/linearLayout"
