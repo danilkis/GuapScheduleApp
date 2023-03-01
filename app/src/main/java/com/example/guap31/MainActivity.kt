@@ -18,17 +18,23 @@ import com.example.guap31.databinding.ActivityMainBinding
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
+
+    // Подключение Binding ActivityMain
     private lateinit var mainBinding: ActivityMainBinding
+    /*------------------------------------------------------------*/
 
     private lateinit var groupLink: MutableMap<String, String>
-    private lateinit var DayList: ArrayList<day_info>
     private lateinit var lessonTime: JSONObject
+
+    private lateinit var DayList: ArrayList<day_info>
 
     private lateinit var adapter: SH_day_adapter
     private lateinit var recyclerView: RecyclerView
 
-    private lateinit var autoComplecteTxt: AutoCompleteTextView
-    private lateinit var adapterItems: ArrayAdapter<String>
+    // Спинер меню с Выбором групп
+    private lateinit var autoComplecteGroup: AutoCompleteTextView
+    private lateinit var adapterGroup: ArrayAdapter<String>
+    /*------------------------------------------------------------*/
 
     var item: String = "0"
 
@@ -37,33 +43,34 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
+        cinnectAllJsonFile()
 
-        groupLink = getLinkGroup()
-
-        var list = ArrayList<String>(groupLink.keys)
-
-        groupLink["С122"]
-
-        autoComplecteTxt = findViewById(R.id.auto_complecte_txt)
-
-        adapterItems = ArrayAdapter(this, R.layout.list_item, list)
-        autoComplecteTxt.setAdapter(adapterItems)
-
-        autoComplecteTxt.setOnItemClickListener { parent, view, position, id ->
-            item = groupLink["С122"].toString()
-            init_day_list()
-        }
-
-        lessonTime = getShJson("time")
-
-        //init_spinner_group()
-        //init_spinner_Week()
-
+        init_AutoCompleteTextGroup(ArrayList<String>(groupLink.keys))
 
         init_day_list()
     }
 
-    fun init_day_list() {
+    // Сборка подключение всех JSON Файлов
+    private fun cinnectAllJsonFile(){
+        groupLink = getLinkGroup("linkage_grop")
+        lessonTime = getShJson("time")
+    }
+
+    // Инцелизация Spiner menu для групп
+    private fun init_AutoCompleteTextGroup(list: ArrayList<String>){
+        autoComplecteGroup = findViewById(R.id.auto_complecte_txt)
+
+        adapterGroup = ArrayAdapter(this, R.layout.list_item, list)
+        autoComplecteGroup.setAdapter(adapterGroup)
+
+        autoComplecteGroup.setOnItemClickListener { parent, view, position, id ->
+            item = groupLink[parent.getItemAtPosition(position)].toString()
+            init_day_list()
+        }
+    }
+
+
+    private fun init_day_list() {
         recyclerView = mainBinding.RViewDay
         adapter = SH_day_adapter()
         recyclerView.adapter = adapter
@@ -102,46 +109,9 @@ class MainActivity : AppCompatActivity() {
         adapter.setScheduleList(DayList)
     }
 
-//    fun init_spinner_Week() {
-//        val numWeek =
-//            listOf("Числитель", "Знаменатель" , "Сегодня")
-//        val list = ArrayAdapter(this, android.R.layout.simple_spinner_item, numWeek)
-//        list.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//
-//        mainBinding.spinner2.adapter = list
-//        mainBinding.spinner2.prompt = "Выбери ниделю"
-//
-//        mainBinding.spinner2.onItemSelectedListener = object :
-//            AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long){
-//
-//                init_day_list()
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>) { }
-//        }
-//    }
-//
-//    fun init_spinner_group() {
-//
-//        val list = ArrayAdapter(this, android.R.layout.simple_spinner_item, groupLink.keys.toList())
-//        list.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//
-//        mainBinding.spinner.adapter = list
-//        mainBinding.spinner.prompt = "Выбери номер группы"
-//
-//        mainBinding.spinner.onItemSelectedListener = object :
-//            AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-//                init_day_list()
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>) { }
-//        }
-//    }
 
-    fun getLinkGroup(): MutableMap<String, String> {
-        val LinkGroup = getShJson("linkage_grop")
+    private fun getLinkGroup(nameJsonFile: String): MutableMap<String, String> {
+        val LinkGroup = getShJson(nameJsonFile)
         val LinkGroupSet = mutableMapOf<String, String>()
 
         for (i in LinkGroup.keys())
@@ -150,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         return LinkGroupSet
     }
 
-    fun getShLesson(JObject: JSONObject, numGroup: String, numWeek: String, nameDay: String): JSONObject{
+    private fun getShLesson(JObject: JSONObject, numGroup: String, numWeek: String, nameDay: String): JSONObject{
         return (JObject
                 .getJSONObject(numGroup)
                     .getJSONObject(numWeek)
@@ -159,7 +129,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("DiscouragedApi")
-    fun getShJson(nameJsonFile: String): JSONObject{
+    private fun getShJson(nameJsonFile: String): JSONObject{
         val jsDate = applicationContext.resources.openRawResource(
             applicationContext.resources.getIdentifier(
                 "" + nameJsonFile,
