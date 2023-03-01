@@ -28,8 +28,10 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var DayList: ArrayList<day_info>
 
+    // Для recyclerView
     private lateinit var adapter: SH_day_adapter
     private lateinit var recyclerView: RecyclerView
+    /*------------------------------------------------------------*/
 
     // Спинер меню с Выбором групп
     private lateinit var autoComplecteGroup: AutoCompleteTextView
