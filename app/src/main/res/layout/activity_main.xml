@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:backgroundTint="@color/material_on_surface_stroke"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -15,7 +12,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/material_dynamic_neutral10"
+        android:background="@color/material_dynamic_neutral_variant60"
         android:backgroundTint="@color/material_dynamic_secondary80"
         android:theme="@style/Theme.Guap31"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,17 +59,65 @@
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButtonWeek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonNumerator"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:padding="7dp"
+            android:text="@string/buttonNumerator"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonToday"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:text="@string/buttonToday"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDenominator"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:padding="7dp"
+            android:text="@string/buttonDenominator"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="211dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RView_day"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:nestedScrollingEnabled="false"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonWeek"
         tools:itemCount="6"
         tools:listitem="@layout/day_sh_layout">
 
