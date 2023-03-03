@@ -19,22 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Расписание"
-            android:textColor="@color/material_dynamic_neutral_variant30"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:theme="@style/Theme.Guap31"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -69,10 +53,9 @@
         app:selectionRequired="true"
         app:singleSelection="true">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonNumerator"
-            style="@style/Widget.App.Button.OutlinedButton.St"
-            android:backgroundTint="@color/material_dynamic_primary30"
+            style = "@style/Widget.App.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.2"
@@ -82,11 +65,10 @@
             tools:layout_editor_absoluteX="135dp"
             tools:layout_editor_absoluteY="62dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonToday"
-            style="@style/Widget.App.Button.OutlinedButton.St"
-            android:backgroundTint="@color/material_dynamic_primary30"
             android:layout_width="0dp"
+            style = "@style/Widget.App.Button.OutlinedButton"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="7dp"
@@ -95,10 +77,9 @@
             tools:layout_editor_absoluteX="140dp"
             tools:layout_editor_absoluteY="127dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDenominator"
-            style="@style/Widget.App.Button.OutlinedButton.St"
-            android:backgroundTint="@color/material_dynamic_primary30"
+            style = "@style/Widget.App.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.2"
@@ -109,9 +90,9 @@
             tools:layout_editor_absoluteY="211dp" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RView_day"
+        android:layoutAnimation="@anim/layout_animation"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:nestedScrollingEnabled="false"

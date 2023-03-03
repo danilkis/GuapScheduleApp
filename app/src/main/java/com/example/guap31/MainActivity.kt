@@ -106,6 +106,7 @@ class MainActivity : AppCompatActivity() {
         DayList = ArrayList()
 
         val outputJsDateString = getShJson("date")
+        recyclerView.scheduleLayoutAnimation()
         for (i in nameDayList.keys) {
             val LessonList = ArrayList<Lesson_info>()
             val lessons = getShLesson(outputJsDateString, groupItem, weekItem, i)

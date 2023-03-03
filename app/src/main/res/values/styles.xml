@@ -1,46 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Widget.App.Button.OutlinedButton.St" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="iconPadding">0dp</item>
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
-        <item name="android:paddingLeft">12dp</item>
-        <item name="android:paddingRight">12dp</item>
-        <item name="android:minWidth">48dp</item>
-        <item name="android:minHeight">48dp</item>
-    </style>
-
-    <style name="Theme.App" parent="ThemeOverlay.Material3.Button">
-        <item name="borderlessButtonStyle">@style/Widget.App.Button.TextButton</item>
-        <item name="materialButtonOutlinedStyle">@style/Widget.App.Button.OutlinedButton</item>
-        <item name="materialButtonStyle">@style/Widget.App.Button</item>
-    </style>
-
-    <style name="Widget.App.Button.TextButton" parent="Widget.Material3.Button.TextButton">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button.TextButton</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.Material3.SmallComponent</item>
-    </style>
-
-    <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button.TextButton</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.ExtraLarge</item>
-    </style>
-
-    <style name="Widget.App.Button" parent="Widget.Material3.Button">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Button</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
-    </style>
-
-    <style name="ThemeOverlay.App.Button.TextButton" parent="">
+    <style name="Theme.Guap31" parent="Theme.Material3.DayNight">
         <item name="colorPrimary">@color/material_dynamic_primary50</item>
-    </style>
-
-    <style name="ThemeOverlay.App.Button" parent="">
-        <item name="colorPrimary">@color/material_dynamic_primary50</item>
+        <item name="colorPrimaryVariant">@color/material_dynamic_neutral_variant40</item>
         <item name="colorOnPrimary">@color/material_dynamic_primary10</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/material_dynamic_secondary50</item>
+        <item name="colorSecondaryVariant">@color/material_dynamic_neutral40</item>
+        <item name="colorOnSecondary">@color/material_dynamic_secondary10</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="colorOnContainerUnchecked">@color/material_dynamic_primary50</item>
     </style>
 </resources>
