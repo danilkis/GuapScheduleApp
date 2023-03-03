@@ -3,6 +3,8 @@ package com.example.guap31
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
@@ -106,7 +108,8 @@ class MainActivity : AppCompatActivity() {
         DayList = ArrayList()
 
         val outputJsDateString = getShJson("date")
-        recyclerView.scheduleLayoutAnimation()
+        reverseAnimation(resources.getIdentifier("layout_animation", "anim", packageName))
+        //recyclerView.scheduleLayoutAnimation()
         for (i in nameDayList.keys) {
             val LessonList = ArrayList<Lesson_info>()
             val lessons = getShLesson(outputJsDateString, groupItem, weekItem, i)
@@ -127,6 +130,14 @@ class MainActivity : AppCompatActivity() {
         adapter.setScheduleList(DayList)
     }
 
+
+    private fun reverseAnimation(animationId: Int) {
+        val animation = AnimationUtils.loadAnimation(this.baseContext, animationId)
+        animation.repeatCount = 1
+        animation.repeatMode = Animation.REVERSE
+        animation.fillAfter = true
+        recyclerView.startAnimation(animation)
+    }
     private fun getLinkGroup(nameJsonFile: String): MutableMap<String, String> {
         val LinkGroup = getShJson(nameJsonFile)
         val LinkGroupSet = mutableMapOf<String, String>()
