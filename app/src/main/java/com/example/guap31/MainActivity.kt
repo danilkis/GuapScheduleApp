@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val nameDayList = mapOf(
-            "Пн" to "Понидельник", "Вт" to "Вторник", "Ср" to "Среда",
+            "Пн" to "Понедельник", "Вт" to "Вторник", "Ср" to "Среда",
             "Чт" to "Четверг", "Пт" to "Пятница", "Сб" to "Суббота")
 
         val nameWeekList = mapOf(
