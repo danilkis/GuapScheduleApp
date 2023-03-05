@@ -3,10 +3,10 @@
     android:id="@+id/rrrr"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/material_dynamic_secondary95"
+    android:background="?attr/colorSecondaryContainer"
 
     android:ellipsize="end"
     android:maxLines="1"
     android:padding="16dp"
     android:textAppearance="?attr/textAppearanceSubtitle1"
-    android:textColor="@color/material_dynamic_neutral0"></TextView>
+    android:textColor="?attr/colorOnSecondaryContainer"></TextView>

@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Guap31" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">#ABC7FF</item>
-        <item name="colorPrimaryContainer">#004590</item>
-        <item name="colorOnPrimary">#002F66</item>
-        <item name="colorOnPrimaryContainer">#D7E2FF</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">#BEC6DC</item>
-        <item name="colorOnSecondary">#283041</item>
-        <item name="colorSecondaryContainer">#3E4759</item>
-        <item name="colorOnSecondaryContainer">#DAE2F9</item>
-        <!-- Status bar color. -->
-        <item name="colorTertiary">#DDBCE0</item>
-        <item name="colorOnTertiary">#3F2844</item>
-        <item name="colorTertiaryContainer">#573E5B</item>
-        <item name="colorOnTertiaryContainer">#FAD8FD</item>
-        <item name="colorSurfaceVariant">#44474E</item>
-        <item name="backgroundColor">#1A1B1F</item>
-    </style>
-    <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="backgroundColor">?attr/colorOnPrimary</item>
-    </style>
-    <style name="Theme.Guap31_you" parent="Theme.Guap31">
+    <style name="Theme.Guap31" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/material_dynamic_primary40</item>
         <item name="colorPrimaryContainer">@color/material_dynamic_primary90</item>
         <item name="colorOnPrimary">@color/material_dynamic_primary100</item>
@@ -38,5 +17,8 @@
         <item name="colorOnTertiaryContainer">@color/material_dynamic_tertiary10</item>
         <item name="colorSurfaceVariant">@color/material_dynamic_neutral_variant10</item>
         <item name="backgroundColor">@color/material_dynamic_neutral99</item>
+    </style>
+    <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundColor">?attr/colorOnPrimary</item>
     </style>
 </resources>

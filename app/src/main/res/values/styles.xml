@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Guap31" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#245DAE</item>
+        <item name="colorPrimaryContainer">#D7E2FF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnPrimaryContainer">#001B3F</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#565E71</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">#DAE2F9</item>
+        <item name="colorOnSecondaryContainer">#131C2C</item>
+        <!-- Status bar color. -->
+        <item name="colorTertiary">#705574</item>
+        <item name="colorOnTertiary">#FFFFFF</item>
+        <item name="colorTertiaryContainer">#FAD8FD</item>
+        <item name="colorOnTertiaryContainer">#29132E</item>
+        <item name="colorSurfaceVariant">#E0E2EC</item>
+        <item name="backgroundColor">#FDFBFF</item>
+    </style>
+    <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="Theme.Guap31_you" parent="Theme.Guap31">
         <item name="colorPrimary">@color/material_dynamic_primary40</item>
         <item name="colorPrimaryContainer">@color/material_dynamic_primary90</item>
         <item name="colorOnPrimary">@color/material_dynamic_primary100</item>
@@ -15,8 +36,7 @@
         <item name="colorOnTertiary">@color/material_dynamic_tertiary100</item>
         <item name="colorTertiaryContainer">@color/material_dynamic_tertiary90</item>
         <item name="colorOnTertiaryContainer">@color/material_dynamic_tertiary10</item>
-    </style>
-    <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="backgroundColor">?attr/colorOnPrimary</item>
+        <item name="colorSurfaceVariant">@color/material_dynamic_neutral_variant10</item>
+        <item name="backgroundColor">@color/material_dynamic_neutral99</item>
     </style>
 </resources>

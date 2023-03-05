@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/backgroundColor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:textAlignment="center"
@@ -82,6 +83,7 @@
         android:layoutAnimation="@anim/layout_animation"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="?attr/backgroundColor"
         android:nestedScrollingEnabled="false"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
 
