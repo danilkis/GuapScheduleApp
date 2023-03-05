@@ -2,17 +2,16 @@ package com.example.guap31
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.view.animation.OvershootInterpolator
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.guap31.SH_day_adapter.SH_day_adapter
-import com.example.guap31.SH_day_adapter.day_info
-import com.example.guap31.SH_lesson_adapter.Lesson_info
+import com.example.guap31.ShDateBase.CreatDB
+import com.example.guap31.ShDateBase.model.modelSH
+import com.example.guap31.adapter.SH_day_adapter.SH_day_adapter
+import com.example.guap31.adapter.SH_day_adapter.day_info
+import com.example.guap31.adapter.SH_lesson_adapter.Lesson_info
 import com.example.guap31.databinding.ActivityMainBinding
 import com.google.android.material.button.MaterialButtonToggleGroup
 import org.json.JSONObject
@@ -49,12 +48,26 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
+        val db = CreatDB.getDateBase(this)
+
+        Thread{
+            db.getDao().insertDB(modelSH(null, 1, "Русский"))
+        }.start()
+
+
+
         cinnectAllJsonFile()
 
         init_AutoCompleteTextGroup(ArrayList<String>(groupLink.keys))
         init_toggleButtonWeek()
 
         init_day_list()
+
+
+
+
+
+
     }
 
     // Инцелизация toggleButtonWeek menu для нидели
@@ -121,12 +134,16 @@ class MainActivity : AppCompatActivity() {
                             keyLes,
                             lessons[keyLes].toString(),
                             lessonTime.getJSONObject("begin").getString(keyLes).toString(),
-                            lessonTime.getJSONObject("end").getString(keyLes).toString()))
+                            lessonTime.getJSONObject("end").getString(keyLes).toString())
+                    )
             }
+
 
             DayList.add(day_info(nameDayList[i].toString(), LessonList))
         }
 
+        val numberOfColumns = 1
+        recyclerView.layoutManager = GridLayoutManager(this, numberOfColumns)
         adapter.setScheduleList(DayList)
     }
     private fun getLinkGroup(nameJsonFile: String): MutableMap<String, String> {

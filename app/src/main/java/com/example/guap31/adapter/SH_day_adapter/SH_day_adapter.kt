@@ -1,4 +1,4 @@
-package com.example.guap31.SH_day_adapter
+package com.example.guap31.adapter.SH_day_adapter
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.guap31.R
-import com.example.guap31.SH_lesson_adapter.Lesson_info
-import com.example.guap31.SH_lesson_adapter.SH_lesson_adapter
+import com.example.guap31.adapter.SH_lesson_adapter.Lesson_info
+import com.example.guap31.adapter.SH_lesson_adapter.SH_lesson_adapter
 import com.example.guap31.databinding.DayShLayoutBinding
 
 import kotlinx.android.synthetic.main.day_sh_layout.view.*

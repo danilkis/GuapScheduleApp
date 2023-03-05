@@ -8,22 +8,8 @@
     tools:context=".MainActivity">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/material_dynamic_neutral_variant60"
-        android:backgroundTint="@color/material_dynamic_secondary80"
-        android:theme="@style/Theme.Guap31"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -90,20 +76,20 @@
             tools:layout_editor_absoluteY="211dp" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RView_day"
         android:layoutAnimation="@anim/layout_animation"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:nestedScrollingEnabled="false"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toggleButtonWeek"
         tools:itemCount="6"
-        tools:listitem="@layout/day_sh_layout">
-
-    </androidx.recyclerview.widget.RecyclerView>
+        tools:listitem="@layout/day_sh_layout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

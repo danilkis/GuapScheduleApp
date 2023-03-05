@@ -1,4 +1,4 @@
-package com.example.guap31.SH_lesson_adapter
+package com.example.guap31.adapter.SH_lesson_adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

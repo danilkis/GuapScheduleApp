@@ -1,4 +1,4 @@
-package com.example.guap31.SH_lesson_adapter
+package com.example.guap31.adapter.SH_lesson_adapter
 
 data class Lesson_info(
     val numLesson: String,
