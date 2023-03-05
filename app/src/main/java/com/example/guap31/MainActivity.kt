@@ -50,9 +50,9 @@ class MainActivity : AppCompatActivity() {
 
         val db = CreatDB.getDateBase(this)
 
-        Thread{
-            db.getDao().insertDB(modelSH(null, 1, "Русский"))
-        }.start()
+//        Thread{
+//            db.getDao().insertDB(modelSH(null, 1, "Русский"))
+//        }.start()
 
 
 
