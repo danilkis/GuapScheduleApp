@@ -92,24 +92,35 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView2"
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/chip_1"
+                style="@style/Widget.Material3.Chip.Assist"
+                app:chipIcon="@drawable/baseline_person_outline_24"
+                android:text="Фамилия Н.Н"
+                android:textColor="?attr/colorOnTertiaryContainer"
+                app:chipBackgroundColor="?attr/colorTertiaryContainer"
+                app:chipIconTint="?attr/colorOnTertiaryContainer"
+                app:layout_constraintStart_toStartOf="@+id/namelesson"
+                app:layout_constraintTop_toBottomOf="@+id/namelesson" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="TextView"
-                app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="@+id/textView" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="TextView"
-                app:layout_constraintStart_toStartOf="@+id/namelesson"
+                android:layout_marginTop="4dp"
+                android:text="Предмет"
+                android:textColor="?attr/colorOnTertiaryContainer"
+                app:chipBackgroundColor="?attr/colorTertiaryContainer"
+                app:chipIcon="@drawable/outline_sticky_note_2_24"
+                app:chipIconTint="?attr/colorOnTertiaryContainer"
+                app:layout_constraintStart_toEndOf="@+id/chip_1"
                 app:layout_constraintTop_toBottomOf="@+id/namelesson" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

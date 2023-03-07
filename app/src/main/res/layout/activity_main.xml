@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     android:textAlignment="center"
     tools:context=".MainActivity">
-
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="0dp"
@@ -19,8 +17,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:hint="@string/select_group"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintStart_toStartOf="parent">
+
         <AutoCompleteTextView
             android:id="@+id/auto_complecte_txt"
             android:layout_width="match_parent"
