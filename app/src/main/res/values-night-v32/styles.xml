@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Guap31" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="elevationOverlayEnabled">true</item>
+        <item name="elevationOverlayColor">#FFFFFF</item>
         <item name="colorPrimary">@color/material_dynamic_primary80</item>
         <item name="colorPrimaryContainer">@color/material_dynamic_primary20</item>
         <item name="colorOnPrimary">@color/material_dynamic_primary30</item>
@@ -17,6 +19,7 @@
         <item name="colorOnTertiaryContainer">@color/material_dynamic_tertiary90</item>
         <item name="colorSurfaceVariant">@color/material_dynamic_neutral_variant30</item>
         <item name="backgroundColor">@color/material_dynamic_neutral10</item>
+        <item name="dividerColor">@color/material_dynamic_neutral_variant50</item>
     </style>
     <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
         <item name="backgroundColor">?attr/colorOnPrimary</item>

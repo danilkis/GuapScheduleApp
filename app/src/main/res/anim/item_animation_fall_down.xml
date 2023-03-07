@@ -1,5 +1,5 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="400"
+    android:duration="450"
     android:repeatMode="restart"
     android:repeatCount="1">
 
@@ -10,10 +10,10 @@
         />
 
     <alpha
-        android:duration="500"
+        android:duration="200"
         android:fromAlpha="0.6"
         android:toAlpha="1"
-        android:interpolator="@android:anim/linear_interpolator"
+        android:interpolator="?attr/motionEasingLinearInterpolator"
         />
     <scale
         android:fromXScale="40%"
@@ -22,7 +22,7 @@
         android:toYScale="100%"
         android:pivotX="50%"
         android:pivotY="50%"
-        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:interpolator="?attr/motionEasingEmphasizedInterpolator"
         />
 
 </set>

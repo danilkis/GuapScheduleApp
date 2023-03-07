@@ -7,74 +7,89 @@
     android:layout_height="match_parent"
     android:textAlignment="center"
     tools:context=".MainActivity">
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:hint="@string/select_group"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <AutoCompleteTextView
-            android:id="@+id/auto_complecte_txt"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="5dp"
+        android:id="@+id/linear1">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/select_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-    <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/toggleButtonWeek"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="6dp"
-        style = "@style/Widget.Material3.MaterialButtonToggleGroup"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:selectionRequired="true"
-        app:singleSelection="true">
+            <AutoCompleteTextView
+                android:id="@+id/auto_complecte_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonNumerator"
-            style = "@style/Widget.App.Button.OutlinedButton"
-            android:layout_width="0dp"
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleButtonWeek"
+            style="@style/Widget.Material3.MaterialButtonToggleGroup"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.2"
-            android:padding="7dp"
-            android:text="@string/buttonNumerator"
-            android:textSize="12sp"
-            tools:layout_editor_absoluteX="135dp"
-            tools:layout_editor_absoluteY="62dp" />
+            android:padding="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:selectionRequired="true"
+            app:singleSelection="true">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonToday"
-            android:layout_width="0dp"
-            style = "@style/Widget.App.Button.OutlinedButton"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="7dp"
-            android:text="@string/buttonToday"
-            android:textSize="12sp"
-            tools:layout_editor_absoluteX="140dp"
-            tools:layout_editor_absoluteY="127dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonNumerator"
+                android:hapticFeedbackEnabled="true"
+                style="@style/Widget.App.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:padding="7dp"
+                android:text="@string/buttonNumerator"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="62dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonDenominator"
-            style = "@style/Widget.App.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.2"
-            android:padding="7dp"
-            android:text="@string/buttonDenominator"
-            android:textSize="12sp"
-            tools:layout_editor_absoluteX="147dp"
-            tools:layout_editor_absoluteY="211dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonToday"
+                android:hapticFeedbackEnabled="true"
+                style="@style/Widget.App.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="7dp"
+                android:text="@string/buttonToday"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="127dp" />
 
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDenominator"
+                style="@style/Widget.App.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:padding="7dp"
+                android:text="@string/buttonDenominator"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="211dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RView_day"
@@ -88,7 +103,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButtonWeek"
+        app:layout_constraintTop_toBottomOf="@+id/linear1"
         tools:itemCount="6"
         tools:listitem="@layout/day_sh_layout"/>
 

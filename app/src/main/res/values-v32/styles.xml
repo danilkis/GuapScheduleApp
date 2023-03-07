@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Guap31" parent="Theme.Material3.Light.NoActionBar">
+        <item name="elevationOverlayEnabled">true</item>
+        <item name="elevationOverlayColor">@color/material_dynamic_primary30</item>
         <item name="colorPrimary">@color/material_dynamic_primary40</item>
         <item name="colorPrimaryContainer">@color/material_dynamic_primary90</item>
         <item name="colorOnPrimary">@color/material_dynamic_primary100</item>
