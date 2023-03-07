@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:background="?attr/colorSurfaceVariant"
-    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:background="?attr/dividerColor"
+    app:cardCornerRadius="16dp"
     app:cardElevation="3dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorSecondaryContainer">
+        android:background="?attr/dividerColor">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -55,5 +55,4 @@
             tools:itemCount="3"
             tools:listitem="@layout/lesson_sh_layout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.cardview.widget.CardView>

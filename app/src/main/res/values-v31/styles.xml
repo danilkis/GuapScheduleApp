@@ -17,6 +17,7 @@
         <item name="colorOnTertiaryContainer">@color/material_dynamic_tertiary10</item>
         <item name="colorSurfaceVariant">@color/material_dynamic_neutral_variant10</item>
         <item name="backgroundColor">@color/material_dynamic_neutral99</item>
+        <item name="dividerColor">@color/material_dynamic_neutral_variant50</item>
     </style>
     <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
         <item name="backgroundColor">?attr/colorOnPrimary</item>

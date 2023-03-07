@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="2dp"
+    android:layout_marginTop="1dp"
     android:background="?attr/colorOnSecondaryContainer"
     app:cardCornerRadius="0dp"
     app:cardElevation="10dp">
@@ -16,17 +16,14 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="?attr/colorOnSecondaryContainer"
+            android:background="?attr/dividerColor"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/linearLayout2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.976" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -113,10 +110,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:text="Предмет"
+                android:text="000-0"
                 android:textColor="?attr/colorOnTertiaryContainer"
                 app:chipBackgroundColor="?attr/colorTertiaryContainer"
-                app:chipIcon="@drawable/outline_sticky_note_2_24"
+                app:chipIcon="@drawable/outline_door_back_24"
                 app:chipIconTint="?attr/colorOnTertiaryContainer"
                 app:layout_constraintStart_toEndOf="@+id/chip_1"
                 app:layout_constraintTop_toBottomOf="@+id/namelesson" />
