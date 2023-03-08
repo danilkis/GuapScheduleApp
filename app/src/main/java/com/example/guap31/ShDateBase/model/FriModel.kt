@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Fri")
+@Entity(tableName = "TabFri")
 data class FriModel(
     @PrimaryKey(autoGenerate = true)
     public var idFriKey: Int? = null,

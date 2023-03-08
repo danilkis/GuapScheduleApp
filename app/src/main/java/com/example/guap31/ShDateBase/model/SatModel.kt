@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Sat")
+@Entity(tableName = "TabSat")
 data class SatModel(
     @PrimaryKey(autoGenerate = true)
     public var idSatKey: Int? = null,

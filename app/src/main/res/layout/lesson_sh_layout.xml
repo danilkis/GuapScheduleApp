@@ -95,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:id="@+id/chip_1"
+                android:id="@+id/NameTeacher"
                 style="@style/Widget.Material3.Chip.Assist"
                 app:chipIcon="@drawable/baseline_person_outline_24"
                 android:text="Фамилия Н.Н"
@@ -108,7 +108,7 @@
 
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip2"
+                android:id="@+id/NumAudience"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -119,7 +119,7 @@
                 app:chipBackgroundColor="?attr/colorTertiaryContainer"
                 app:chipIcon="@drawable/outline_door_back_24"
                 app:chipIconTint="?attr/colorOnTertiaryContainer"
-                app:layout_constraintStart_toEndOf="@+id/chip_1"
+                app:layout_constraintStart_toEndOf="@+id/NameTeacher"
                 app:layout_constraintTop_toBottomOf="@+id/namelesson" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

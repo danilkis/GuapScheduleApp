@@ -48,10 +48,7 @@ class SH_day_adapter: RecyclerView.Adapter<SH_day_adapter.ScheduleHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
     fun setScheduleList(ScheduleList: List<day_info>){
-        Log.d("myLog", "setScheduleList: ${ScheduleList}")
         day_info_list = ScheduleList
-        Log.d("myLog", "day_info_list = ScheduleList")
         notifyDataSetChanged()
-        Log.d("myLog", "notifyDataSetChanged")
     }
 }

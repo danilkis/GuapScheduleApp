@@ -23,11 +23,15 @@ class SH_lesson_adapter: RecyclerView.Adapter<SH_lesson_adapter.ScheduleHolder>(
     }
 
     override fun onBindViewHolder(holder: ScheduleHolder, position: Int) {
-        holder.itemView.numLesson.text = lesson_info_list[position].numLesson
-        holder.itemView.namelesson.text = lesson_info_list[position].nameLesson
+        holder.itemView.numLesson.text = lesson_info_list[position].NumLesson.toString()
+        holder.itemView.namelesson.text = lesson_info_list[position].NameLesson
 
         holder.itemView.beginTime.text = lesson_info_list[position].beginTime
         holder.itemView.endTime.text = lesson_info_list[position].endTime
+
+        holder.itemView.NameTeacher.text = lesson_info_list[position].NameTeacher
+        holder.itemView.NumAudience.text = lesson_info_list[position].NumAudience
+
     }
 
     override fun getItemCount(): Int { return lesson_info_list.size }

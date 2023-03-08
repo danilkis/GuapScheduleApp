@@ -3,7 +3,7 @@ package com.example.guap31.ShDateBase.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-@Entity(tableName = "Thu")
+@Entity(tableName = "TabThu")
 data class ThuModel(
     @PrimaryKey(autoGenerate = true)
     public var idThuKey: Int? = null,

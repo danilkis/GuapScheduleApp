@@ -19,22 +19,22 @@ data class modelSH(
     @ColumnInfo(name = "WeekId")
     public var WeekId: Int,
 
-    @ColumnInfo(name = "Mon")
+    @ColumnInfo(name = "MonId")
     public var Mon: Int,
 
-    @ColumnInfo(name = "Tue")
+    @ColumnInfo(name = "TueId")
     public var Tue: Int,
 
-    @ColumnInfo(name = "Wed")
+    @ColumnInfo(name = "WedId")
     public var Wed: Int,
 
-    @ColumnInfo(name = "Thu")
+    @ColumnInfo(name = "ThuId")
     public var Thu: Int,
 
-    @ColumnInfo(name = "Fri")
+    @ColumnInfo(name = "FriId")
     public var Fri: Int,
 
-    @ColumnInfo(name = "Sat")
+    @ColumnInfo(name = "SatId")
     public var Sat: Int
 
 )
