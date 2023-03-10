@@ -17,6 +17,7 @@
         <item name="colorOnTertiaryContainer">#FAD8FD</item>
         <item name="colorSurfaceVariant">#44474E</item>
         <item name="backgroundColor">#1A1B1F</item>
+        <item name="dividerColor">#c0c0c0</item>
     </style>
     <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
         <item name="backgroundColor">?attr/colorOnPrimary</item>
@@ -31,6 +32,7 @@
         <item name="colorOnSecondary">@color/material_dynamic_secondary100</item>
         <item name="colorSecondaryContainer">@color/material_dynamic_secondary90</item>
         <item name="colorOnSecondaryContainer">@color/material_dynamic_secondary10</item>
+        <item name="dividerColor">@color/material_dynamic_neutral_variant50</item>
         <!-- Status bar color. -->
         <item name="colorTertiary">@color/material_dynamic_tertiary40</item>
         <item name="colorOnTertiary">@color/material_dynamic_tertiary100</item>
