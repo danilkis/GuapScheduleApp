@@ -17,6 +17,7 @@
         <item name="colorOnTertiaryContainer">#29132E</item>
         <item name="colorSurfaceVariant">#E0E2EC</item>
         <item name="backgroundColor">#FDFBFF</item>
+        <item name="dividerColor">#c0c0c0</item>
     </style>
     <style name="Widget.App.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
         <item name="backgroundColor">?attr/colorOnPrimary</item>
