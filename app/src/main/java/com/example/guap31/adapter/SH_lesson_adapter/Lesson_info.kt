@@ -5,19 +5,21 @@ import androidx.room.Entity
 
 @Entity
 data class Lesson_info(
+    @ColumnInfo(name = "name_day")
+    val day: String,
 
-    @ColumnInfo(name = "beginTime")
+    @ColumnInfo(name = "time_begin")
     val beginTime: String,
-    @ColumnInfo(name = "endTime")
+    @ColumnInfo(name = "time_end")
     val endTime: String,
 
-    @ColumnInfo(name = "NumLesson")
+    @ColumnInfo(name = "num_lesson")
     val NumLesson: Int,
-    @ColumnInfo(name = "NameLesson")
+    @ColumnInfo(name = "lesson")
     val NameLesson: String,
 
-    @ColumnInfo(name = "NameTeacher")
+    @ColumnInfo(name = "name_tech")
     val NameTeacher: String,
-    @ColumnInfo(name = "NumAudience")
+    @ColumnInfo(name = "name_aud")
     val NumAudience: String
     )

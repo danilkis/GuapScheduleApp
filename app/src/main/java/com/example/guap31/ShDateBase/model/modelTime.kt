@@ -5,14 +5,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Time")
-data class TimeModel(
-    @PrimaryKey(autoGenerate = true)
-    public var idlesson: Int? = null,
+data class modelTime(
+    @PrimaryKey(autoGenerate = false) @ColumnInfo(name = "time_id")
+    var time_id: Int,
 
     @ColumnInfo(name = "time_begin")
-    public var time_begin: String,
+    var time_begin: String,
 
     @ColumnInfo(name = "time_end")
-    public var time_end: String
-
+    var time_end: String
 )

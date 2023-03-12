@@ -9,10 +9,7 @@ import com.example.guap31.ShDateBase.dio.ShDio
 import com.example.guap31.ShDateBase.model.*
 
 
-@Database(entities = [
-    modelSH::class, GroupCollegeModel::class, NameWeekModel::class, TeacherModel::class, AudienceModel::class, TimeModel::class,
-    MonModel::class, TueModel::class, WedModel::class,
-    ThuModel::class, FriModel::class, SatModel::class], version = 1)
+@Database(entities = [modelSH::class, modelAud::class, modelTech::class, modelNameWeek::class, modelTime::class, modelGroupCollect::class], version = 1)
 abstract class CreatDB: RoomDatabase() {
     abstract fun getDao(): ShDio
     companion object{
