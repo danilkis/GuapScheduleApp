@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="1dp"
+    android:layout_marginTop="2dp"
     android:background="?attr/colorOnSecondaryContainer"
     app:cardCornerRadius="0dp"
     app:cardElevation="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="?attr/colorSecondaryContainer">
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="1dp"
+            android:layout_width="2dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             android:background="?attr/dividerColor"
@@ -49,11 +49,11 @@
 
             <TextView
                 android:id="@+id/numLesson"
+                style="@style/TextAppearance.AppCompat.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="1dp"
                 android:text="n"
-                style="@style/TextAppearance.AppCompat.Small"
                 android:textAlignment="center"
                 android:textColor="?attr/colorOnSecondaryContainer"
                 android:textSize="14sp" />
@@ -82,26 +82,26 @@
 
             <TextView
                 android:id="@+id/namelesson"
+                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="namelesson"
-                style="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
                 android:textColor="?attr/colorOnSecondaryContainer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/NameTeacher"
+                style="@style/Widget.Material3.Chip.Assist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:id="@+id/NameTeacher"
-                style="@style/Widget.Material3.Chip.Assist"
-                app:chipIcon="@drawable/baseline_person_outline_24"
-                android:text="Фамилия Н.Н"
                 android:clickable="false"
+                android:text="Фамилия Н.Н"
                 android:textColor="?attr/colorOnTertiaryContainer"
                 app:chipBackgroundColor="?attr/colorTertiaryContainer"
+                app:chipIcon="@drawable/baseline_person_outline_24"
                 app:chipIconTint="?attr/colorOnTertiaryContainer"
                 app:layout_constraintStart_toStartOf="@+id/namelesson"
                 app:layout_constraintTop_toBottomOf="@+id/namelesson" />
@@ -113,8 +113,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:text="000-0"
                 android:clickable="false"
+                android:text="000-0"
                 android:textColor="?attr/colorOnTertiaryContainer"
                 app:chipBackgroundColor="?attr/colorTertiaryContainer"
                 app:chipIcon="@drawable/outline_door_back_24"
