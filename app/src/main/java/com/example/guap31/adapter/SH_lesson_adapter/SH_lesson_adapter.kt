@@ -1,6 +1,7 @@
 package com.example.guap31.adapter.SH_lesson_adapter
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,8 +30,21 @@ class SH_lesson_adapter: RecyclerView.Adapter<SH_lesson_adapter.ScheduleHolder>(
         holder.itemView.beginTime.text = lesson_info_list[position].beginTime
         holder.itemView.endTime.text = lesson_info_list[position].endTime
 
-        holder.itemView.NameTeacher.text = lesson_info_list[position].NameTeacher
-        holder.itemView.NumAudience.text = lesson_info_list[position].NumAudience
+        var teach = lesson_info_list[position].NameTeacher.split("\n")
+        holder.itemView.NameTeacherOne.text = teach[0]
+
+        if(teach.size == 2){
+            holder.itemView.NameTeacherTwo.visibility = View.VISIBLE
+            holder.itemView.NameTeacherTwo.text = teach[1]
+        }
+
+        var Aud = lesson_info_list[position].NumAudience.split("\n")
+        holder.itemView.NumAudienceOne.text = Aud[0]
+        if(teach.size == 2){
+            holder.itemView.NumAudienceTwo.visibility = View.VISIBLE
+            holder.itemView.NumAudienceTwo.text = Aud[1]
+        }
+
 
     }
 

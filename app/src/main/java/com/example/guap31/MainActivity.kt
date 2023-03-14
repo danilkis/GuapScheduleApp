@@ -143,7 +143,7 @@ class MainActivity : AppCompatActivity() {
 
         DayList = arrayListOf()
         day_week.keys.forEach { it_day ->
-            var Les: ArrayList<Lesson_info> = arrayListOf()
+            val Les: ArrayList<Lesson_info> = arrayListOf()
             Lesson.forEach { it_Lesson ->
                 if (it_Lesson.day == it_day)
                     Les.add(it_Lesson) // Сортировка по дням Нидели
