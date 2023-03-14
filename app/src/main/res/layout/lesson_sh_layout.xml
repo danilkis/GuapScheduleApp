@@ -95,6 +95,7 @@
                 android:id="@+id/chipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:singleLine="true"
                 app:chipSpacingHorizontal = "3dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -102,7 +103,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/namelesson">
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/NameTeacherOne"
+                    android:id="@+id/NameTeacher"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -114,7 +115,7 @@
                     app:chipIconTint="?attr/colorOnTertiaryContainer" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/NumAudienceOne"
+                    android:id="@+id/NumAudience"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="false"
@@ -123,34 +124,34 @@
                     app:chipBackgroundColor="?attr/colorTertiaryContainer"
                     app:chipIcon="@drawable/outline_door_back_24"
                     app:chipIconTint="?attr/colorOnTertiaryContainer"
-                    app:layout_constraintStart_toEndOf="@+id/NameTeacherOne"
+                    app:layout_constraintStart_toEndOf="@+id/NameTeacher"
                     app:layout_constraintTop_toBottomOf="@+id/namelesson" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/NameTeacherTwo"
+                    android:id="@+id/NameTeacher2"
+                    android:visibility="gone"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="false"
                     android:text="Фамилия Н.Н"
                     android:textColor="?attr/colorOnTertiaryContainer"
-                    android:visibility="gone"
                     app:chipBackgroundColor="?attr/colorTertiaryContainer"
                     app:chipIcon="@drawable/baseline_person_outline_24"
                     app:chipIconTint="?attr/colorOnTertiaryContainer" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/NumAudienceTwo"
+                    android:id="@+id/NumAudience2"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:clickable="false"
                     android:text="000-0"
                     android:textColor="?attr/colorOnTertiaryContainer"
-                    android:visibility="gone"
                     app:chipBackgroundColor="?attr/colorTertiaryContainer"
                     app:chipIcon="@drawable/outline_door_back_24"
                     app:chipIconTint="?attr/colorOnTertiaryContainer"
-                    app:layout_constraintStart_toEndOf="@+id/NameTeacherOne"
+                    app:layout_constraintStart_toEndOf="@+id/NameTeacher"
                     app:layout_constraintTop_toBottomOf="@+id/namelesson" />
             </com.google.android.material.chip.ChipGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>

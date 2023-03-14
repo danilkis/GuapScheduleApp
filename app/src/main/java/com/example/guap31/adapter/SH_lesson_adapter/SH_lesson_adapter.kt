@@ -8,6 +8,7 @@ import android.view.ViewGroup
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.guap31.R
+import com.google.android.material.chip.Chip
 import kotlinx.android.synthetic.main.day_sh_layout.view.*
 import kotlinx.android.synthetic.main.lesson_sh_layout.view.*
 
@@ -24,29 +25,44 @@ class SH_lesson_adapter: RecyclerView.Adapter<SH_lesson_adapter.ScheduleHolder>(
     }
 
     override fun onBindViewHolder(holder: ScheduleHolder, position: Int) {
-        holder.itemView.numLesson.text = lesson_info_list[position].NumLesson.toString()
-        holder.itemView.namelesson.text = lesson_info_list[position].NameLesson
+        // Подготовка и сокрощение доступа к обыектам
+        val itemView = holder.itemView
 
-        holder.itemView.beginTime.text = lesson_info_list[position].beginTime
-        holder.itemView.endTime.text = lesson_info_list[position].endTime
+        val numLesson = itemView.numLesson
+        val namelesson = itemView.namelesson
+        val beginTime = itemView.beginTime
+        val endTime = itemView.endTime
+        val NameTeacherOne = itemView.NameTeacherOne
+        val NumAudienceOne = itemView.NumAudienceOne
+        val NameTeacherTwo = itemView.NameTeacherTwo
+        val NumAudienceTwo = itemView.NumAudienceTwo
 
-        var teach = lesson_info_list[position].NameTeacher.split("\n")
-        holder.itemView.NameTeacherOne.text = teach[0]
+        // Дата класс, расписание группы
+        val lesson = lesson_info_list[position]
 
-        if(teach.size == 2){
-            holder.itemView.NameTeacherTwo.visibility = View.VISIBLE
-            holder.itemView.NameTeacherTwo.text = teach[1]
-        }
+        // Заполнение Полей данными
+        numLesson.text = lesson.NumLesson.toString()
+        namelesson.text = lesson.NameLesson
 
-        var Aud = lesson_info_list[position].NumAudience.split("\n")
-        holder.itemView.NumAudienceOne.text = Aud[0]
-        if(teach.size == 2){
-            holder.itemView.NumAudienceTwo.visibility = View.VISIBLE
-            holder.itemView.NumAudienceTwo.text = Aud[1]
-        }
+        beginTime.text = lesson.beginTime
+        endTime.text = lesson.endTime
 
+        ChipFilling(NameTeacherOne, NameTeacherTwo, lesson.NameTeacher)
+        ChipFilling(NumAudienceOne, NumAudienceTwo, lesson.NumAudience)
 
     }
+
+    // Работа с чип групп для Учителей и Аудиторий
+    private fun ChipFilling(oneChip: Chip, twoChip: Chip, date: String){
+        val item = date.split("\n")
+        oneChip.text = item[0]
+
+        if (item.size == 2){
+            twoChip.visibility = View.VISIBLE
+            twoChip.text = item[1]
+        }
+    }
+
 
     override fun getItemCount(): Int { return lesson_info_list.size }
 
