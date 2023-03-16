@@ -95,17 +95,18 @@
                 android:id="@+id/chipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:chipSpacingHorizontal = "3dp"
+                app:chipSpacingHorizontal="4dp"
+                app:chipSpacingVertical="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/namelesson"
                 app:layout_constraintTop_toBottomOf="@+id/namelesson">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/NameTeacherOne"
+                    app:chipMinTouchTargetSize = "45dp"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:clickable="false"
                     android:text="Фамилия Н.Н"
                     android:textColor="?attr/colorOnTertiaryContainer"
@@ -115,8 +116,9 @@
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/NumAudienceOne"
+                    app:chipMinTouchTargetSize = "45dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:clickable="false"
                     android:text="000-0"
                     android:textColor="?attr/colorOnTertiaryContainer"
@@ -128,21 +130,23 @@
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/NameTeacherTwo"
+                    app:chipMinTouchTargetSize = "45dp"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:clickable="false"
+                    android:visibility="gone"
                     android:text="Фамилия Н.Н"
                     android:textColor="?attr/colorOnTertiaryContainer"
-                    android:visibility="gone"
                     app:chipBackgroundColor="?attr/colorTertiaryContainer"
                     app:chipIcon="@drawable/baseline_person_outline_24"
                     app:chipIconTint="?attr/colorOnTertiaryContainer" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/NumAudienceTwo"
+                    app:chipMinTouchTargetSize = "45dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:clickable="false"
                     android:text="000-0"
                     android:textColor="?attr/colorOnTertiaryContainer"
